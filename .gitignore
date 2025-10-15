@@ -1,0 +1,41 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Python egg files
+*.egg-info/
+*.egg
+dist/
+build/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook outputs
+*.nbconvert.ipynb
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Test outputs
+*.pytest_cache/
+
+assets/
