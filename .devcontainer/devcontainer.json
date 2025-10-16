@@ -20,7 +20,9 @@
                 "ms-toolsai.jupyter",
                 "ms-python.vscode-python-envs",
                 "ms-python.debugpy",
-                "ms-vscode.makefile-tools"
+                "ms-vscode.makefile-tools",
+                "RandomFractalsInc.vscode-data-preview",
+                "searKing.preview-vscode"
             ],
             "settings": {
                 "[python]": {
