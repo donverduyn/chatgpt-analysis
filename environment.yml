@@ -1,0 +1,27 @@
+name: dev
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.11.12
+  - pytorch=2.5.1
+  - pytorch-cuda=12.4
+  - numpy=1.26.*
+  - pandas=2.2.*
+  - scikit-learn=1.5.*
+  - scipy=1.13.*
+  - matplotlib-base=3.9.*
+  - seaborn=0.13.*
+  - jupyterlab=4.0.*
+  - jupyterthemes=0.20.*
+  - notebook=6.5.*
+  - ipywidgets=8.1.*
+  - ipykernel=6.*
+  - tqdm=4.66.*
+  - black=23.9.*
+  - flake8=6.1.*
+  - isort=5.12.*
+  - pip=23.3.*
+  - pip:
+      - sentence-transformers==2.3.1

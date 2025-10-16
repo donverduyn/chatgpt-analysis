@@ -19,7 +19,6 @@ dist/
 build/
 
 # IDE and editor settings
-.vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
@@ -37,5 +36,7 @@ Thumbs.db
 
 # Test outputs
 *.pytest_cache/
+
+.micromamba/
 
 assets/

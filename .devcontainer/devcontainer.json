@@ -1,24 +1,87 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/miniconda
 {
-	"name": "Miniconda (Python 3)",
-	"build": { 
-		"context": "..",
-		"dockerfile": "Dockerfile"
-	}
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "python --version",
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+    "build": {
+        "context": "..",
+        "dockerfile": "Dockerfile"
+    },
+    "containerEnv": {
+        "MAMBA_ROOT_PREFIX": "${containerWorkspaceFolder}/.micromamba"
+    },
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.isort",
+                "ms-python.black-formatter",
+                "ms-python.flake8",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-python.vscode-python-envs",
+                "ms-python.debugpy",
+                "ms-vscode.makefile-tools"
+            ],
+            "settings": {
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                },
+                "black-formatter.args": [
+                    "--line-length=88"
+                ],
+                "black-formatter.path": [
+                    "${workspaceFolder}/.micromamba/envs/dev/bin/black"
+                ],
+                "flake8.args": [
+                    "--max-line-length=88"
+                ],
+                "flake8.path": [
+                    "${workspaceFolder}/.micromamba/envs/dev/bin/flake8"
+                ],
+                "isort.path": [
+                    "${workspaceFolder}/.micromamba/envs/dev/bin/isort"
+                ],
+                "python.defaultInterpreterPath": "${workspaceFolder}/.micromamba/envs/dev/bin/python",
+                "python.linting.flake8Args": [
+                    "--max-line-length=88"
+                ],
+                "python.linting.flake8Enabled": true
+            }
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "dockerDashComposeVersion": "v2",
+            "installDockerBuildx": true,
+            "installDockerComposeSwitch": true,
+            "moby": true,
+            "version": "latest"
+        },
+        "ghcr.io/mamba-org/devcontainer-features/micromamba:1": {
+            "autoActivate": false,
+            "channels": "conda-forge",
+            "envFile": "../environment.yml",
+            "envName": "dev",
+            "packages": "",
+            "version": "latest"
+        }
+    },
+    "forwardPorts": [
+        5000
+    ],
+    "hostRequirements": {
+        "gpu": "optional"
+    },
+    "name": "Micromamba (Python 3)",
+    "postCreateCommand": "./.devcontainer/setup-env.sh",
+    "remoteEnv": {
+        "MAMBA_ROOT_PREFIX": "./.micromamba"
+    },
+    // To enable GPU access inside the container (requires NVIDIA drivers +
+    // the NVIDIA Container Toolkit on the host), add the following runArgs.
+    // This will pass the `--gpus` flag to Docker so the container can see GPUs.
+    "runArgs": [
+        "--gpus",
+        "all"
+    ]
 }

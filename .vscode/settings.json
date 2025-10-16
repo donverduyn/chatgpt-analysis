@@ -1,0 +1,24 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.convertImportFormat": "explicit",
+        "source.fixAll": "explicit",
+        "source.fixAll.pylance": "explicit",
+        "source.organizeImports": "explicit",
+        "source.sort.json": "explicit",
+        "source.unusedImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": [],
+    "makefile.configureOnOpen": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.ipynb_checkpoints": true,
+    }
+}
