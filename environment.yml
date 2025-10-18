@@ -9,10 +9,15 @@ dependencies:
   - pytorch-cuda=12.4
   - numpy=1.26.*
   - pandas=2.2.*
-  - scikit-learn=1.5.*
+  - scikit-learn=1.7.*
   - scipy=1.13.*
+  - hdbscan=0.8.*
+  - umap-learn=0.5.*
+  - nltk=3.8.*
+  - transformers=4.44.*
   - matplotlib-base=3.9.*
   - seaborn=0.13.*
+  - pygwalker=0.4.9.*
   - jupyterlab=4.0.*
   - jupyterthemes=0.20.*
   - notebook=6.5.*
@@ -22,6 +27,7 @@ dependencies:
   - black=23.9.*
   - flake8=6.1.*
   - isort=5.12.*
+  - pytest=7.2.*
   - pip=23.3.*
   - pip:
       - sentence-transformers==2.3.1

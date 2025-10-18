@@ -22,7 +22,8 @@
                 "ms-python.debugpy",
                 "ms-vscode.makefile-tools",
                 "RandomFractalsInc.vscode-data-preview",
-                "searKing.preview-vscode"
+                "searKing.preview-vscode",
+                "littlefoxteam.vscode-python-test-adapter"
             ],
             "settings": {
                 "[python]": {
@@ -35,7 +36,8 @@
                     "${workspaceFolder}/.micromamba/envs/dev/bin/black"
                 ],
                 "flake8.args": [
-                    "--max-line-length=88"
+                    "--max-line-length=88",
+                    "--ignore=E203"
                 ],
                 "flake8.path": [
                     "${workspaceFolder}/.micromamba/envs/dev/bin/flake8"

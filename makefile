@@ -11,3 +11,6 @@ lint:
 
 format:
 	black notebooks/ scripts/
+
+gpu-info:
+	./.devcontainer/gpu-info.sh

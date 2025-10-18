@@ -20,5 +20,10 @@
         "**/__pycache__": true,
         "**/*.pyc": true,
         "**/.ipynb_checkpoints": true,
-    }
+    },
+    "python.testing.pytestArgs": [
+        "services"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }

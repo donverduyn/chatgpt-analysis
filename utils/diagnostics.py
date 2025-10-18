@@ -2,7 +2,6 @@
 import subprocess
 
 print("--- GPU diagnostics ---")
-# lightweight torch import for device checks; if not installed, install a CUDA-enabled build
 try:
     import torch
 except Exception:
@@ -24,6 +23,4 @@ if torch is not None:
         except Exception:
             pass
 else:
-    print(
-        "torch not installed in this environment. Install a CUDA-enabled torch if you want GPU execution."
-    )
+    print("torch not installed in this environment.")
