@@ -1,10 +1,10 @@
 # Makefile
 
 install:
-	./.devcontainer/setup-env.sh
+	./scripts/setup-env.sh
 
 dev:
-	./.devcontainer/start-jupyter.sh
+	./scripts/start-jupyter.sh
 
 lint:
 	flake8 notebooks/ scripts/
@@ -13,4 +13,4 @@ format:
 	black notebooks/ scripts/
 
 gpu-info:
-	./.devcontainer/gpu-info.sh
+	./scripts/gpu-info.sh

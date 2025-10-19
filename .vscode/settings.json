@@ -20,6 +20,8 @@
         "**/__pycache__": true,
         "**/*.pyc": true,
         "**/.ipynb_checkpoints": true,
+        "**/.pytest_cache": true,
+        "**/mamba*": true,
     },
     "python.testing.pytestArgs": [
         "services"
